@@ -1,0 +1,63 @@
+ocamlagrep
+------------------------------------------
+This OCaml library implements the Wu-Manber algorithm for string 
+searching with errors, popularized by the 'agrep' Unix command and the 
+'glimpse' file indexing tool. It was developed as part of a search 
+engine for a largish MP3 collection; the 'with error' searching comes 
+handy for those who can't spell Liszt or Shostakovitch.
+
+Runtime requirements:
+  cygwin-1.5.24-2
+  ocaml-3.09.3-1
+
+Build requirements:
+  cygwin-1.5.24-1
+  binutils-20060817-1
+  cygport-0.3.1-1
+  gcc-core-3.4.4-3
+  make-3.81-1
+  ocaml-3.09.3-1
+
+Canonical website:
+  http://pauillac.inria.fr/~xleroy/software.html
+
+Canonical download:
+  http://caml.inria.fr/distrib/bazar-ocaml/
+
+-------------------------------------------
+
+Build instructions:
+  unpack ocamlagrep-1.0-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./ocamlagrep-1.0-X.cygport all
+
+This will create:
+  /usr/src/ocamlagrep-1.0-X-src.tar.bz2
+  /usr/src/ocamlagrep-1.0-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/lib/ocaml/agrep/agrep.a
+  /usr/lib/ocaml/agrep/agrep.cma
+  /usr/lib/ocaml/agrep/agrep.cmi
+  /usr/lib/ocaml/agrep/agrep.cmxa
+  /usr/lib/ocaml/agrep/dllagrep.so
+  /usr/lib/ocaml/agrep/libagrep.a
+  /usr/lib/ocaml/stublibs/dllagrep.so
+  /usr/share/doc/Cygwin/ocamlagrep-1.0.README
+  /usr/share/doc/ocamlagrep-1.0/README
+
+------------------
+
+Port Notes:
+
+----- version 1.0-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
