@@ -1,0 +1,25 @@
+ORIG_PN="ocamlagrep"
+inherit ocaml
+
+DESCRIPTION="OCaml approximate grep library"
+HOMEPAGE="http://cristal.inria.fr/~xleroy/software.html"
+SRC_URI="http://caml.inria.fr/distrib/bazar-ocaml/${ORIG_PN}-${PV}.tar.gz"
+
+MAKEOPTS+=" -j1"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake
+}
+
+src_install() {
+	cd ${B}
+	cyginstall DESTDIR=${D}${OCAML_LIBDIR}/agrep
+
+	insinto ${OCAML_LIBDIR}/agrep
+	doins agrep.{a,mli}
+
+	dodir ${OCAML_STUBDIR}
+	mv ${D}${OCAML_LIBDIR}/agrep/dll*.so ${D}${OCAML_STUBDIR}
+}
