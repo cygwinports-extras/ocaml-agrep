@@ -1,5 +1,5 @@
 category: OCaml
-requires: cygwin ocaml
+requires: ocaml
 sdesc: "OCaml approximate grep library"
 ldesc: "This OCaml library implements the Wu-Manber algorithm for string 
 searching with errors, popularized by the 'agrep' Unix command and the 
